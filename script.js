@@ -15,7 +15,6 @@ let productIndex = null;
 let showItem = () => {
   table.innerHTML = "";
   products.forEach((el, index) => {
-    
     let row = `
          <tr>
             <td>${index + 1}</td>
@@ -61,15 +60,26 @@ let addProduct = () => {
     price: +productPrice.value,
     qty: +productQty.value,
   };
-  products.push(product);
-  localStorage.setItem("products", JSON.stringify(products));
-  model.style.display = "none";
-  Swal.fire("Added", "", "success");
-  showItem();
+
+  if (productName.value != "" && productPrice.value !="" && productQty.value!="") {
+    products.push(product);
+    localStorage.setItem("products", JSON.stringify(products));
+    model.style.display = "none";
+    Swal.fire("Added", "", "success");
+    showItem();
+  } else {
+    Swal.fire({
+      icon: "warning",
+      text:"please make sure to fill in the data",
+    }
+
+      
+    )
+  }
 };
 
 let showEditProduct = (index) => {
-    productIndex = index;
+  productIndex = index;
   model2.style.display = "flex";
   let productEdit = products[index];
   productName2.value = productEdit.name;
@@ -77,9 +87,8 @@ let showEditProduct = (index) => {
   productQty2.value = productEdit.qty;
 };
 
-
 let editProduct = () => {
-     let product = {
+  let product = {
     name: productName2.value,
     price: +productPrice2.value,
     qty: +productQty2.value,
@@ -95,4 +104,3 @@ let closeModel = () => {
   model.style.display = "none";
   model2.style.display = "none";
 };
-

@@ -31,10 +31,18 @@
 }
 
 #model input, #model2 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
   margin-bottom: 12px;
+  border-radius: 10px;
   background-color: #2a2a2a;
   color: #fff;
-  border: 1px solid #444;
+  border: 1px solid #ff8800;
+  &:focus{
+     border: 1px solid #ff8800;
+     box-shadow: 0 0 10px #ff8800;
+  }
 }
 
 #model button, #model2 button {
