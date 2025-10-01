@@ -3,7 +3,7 @@ let productJ = localStorage.getItem("products");
 let products = productJ ? JSON.parse(productJ) : [];
 
 products.length == 0
-  ? (container.innerHTML = `<p class="text-center ">No products found.</p>`)
+  ? (container.innerHTML = `<p class="text-center text-white">No products found.</p>`)
   : products.forEach((p) => {
       let card = `
           <div class="col-md-3 mb-3">
