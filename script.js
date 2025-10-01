@@ -1,6 +1,6 @@
 let table = document.querySelector("table tbody");
 let productJ = localStorage.getItem("products");
-let products = JSON.parse(productJ);
+let products = productJ ? JSON.parse(productJ) : [];
 //add product
 let model = document.querySelector("#model");
 let productName = document.querySelector("#productName");
@@ -95,3 +95,4 @@ let closeModel = () => {
   model.style.display = "none";
   model2.style.display = "none";
 };
+

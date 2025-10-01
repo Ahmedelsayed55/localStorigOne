@@ -9,44 +9,91 @@
       integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw=="
       crossorigin="anonymous"
     />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css' integrity='sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==' crossorigin='anonymous'/>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+      integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=="
+      crossorigin="anonymous"
+    />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css"
       integrity="sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <div id="model" onclick="closeModel()">
-        <div onclick="event.stopPropagation ()" class="animate__animated animate__fadeIn">
-            <h1>Add Product</h1>
-            <input class="form-control" type="text" id="productName" placeholder="Product Name">
-            <input class="form-control" type="text" id="productPrice" placeholder="Product Price">
-            <input class="form-control" type="text" id="productQty" placeholder="Product qty">
-            <button onclick="addProduct()">Add Product</button>
-        </div>
-    </div>
-    
-    <div id="model2" onclick="closeModel()">
-        <div onclick="event.stopPropagation ()" class="animate__animated animate__fadeIn">
-            <h1>Edit Product</h1>
-            <input class="form-control" type="text" id="productName2" placeholder="Product Name">
-            <input class="form-control" type="text" id="productPrice2" placeholder="Product Price">
-            <input class="form-control" type="text" id="productQty2" placeholder="Product qty">
-            <button onclick="editProduct()">Edit Product</button>
-        </div>
+      <div
+        onclick="event.stopPropagation ()"
+        class="animate__animated animate__fadeIn"
+      >
+        <h1>Add Product</h1>
+        <input
+          class="form-control"
+          type="text"
+          id="productName"
+          placeholder="Product Name"
+        />
+        <input
+          class="form-control"
+          type="text"
+          id="productPrice"
+          placeholder="Product Price"
+        />
+        <input
+          class="form-control"
+          type="text"
+          id="productQty"
+          placeholder="Product qty"
+        />
+        <button onclick="addProduct()">Add Product</button>
+      </div>
     </div>
 
+    <div id="model2" onclick="closeModel()">
+      <div
+        onclick="event.stopPropagation ()"
+        class="animate__animated animate__fadeIn"
+      >
+        <h1>Edit Product</h1>
+        <input
+          class="form-control"
+          type="text"
+          id="productName2"
+          placeholder="Product Name"
+        />
+        <input
+          class="form-control"
+          type="text"
+          id="productPrice2"
+          placeholder="Product Price"
+        />
+        <input
+          class="form-control"
+          type="text"
+          id="productQty2"
+          placeholder="Product qty"
+        />
+        <button onclick="editProduct()">Edit Product</button>
+      </div>
+    </div>
+    <div
+      class="container rounded-1 p-3 mb-4 bg-dark text-white d-flex justify-content-between align-items-center"
+    >
+      <h1 class="m-0">Dashboard</h1>
+      <a href="products.html" class="btn btn-light">Products</a>
+    </div>
     <div class="container">
       <button onclick="NewProduct()">New Product</button>
 
-      <table class="table table-striped">
+      <table class="table table-dark">
         <thead>
           <tr>
-            <th>#</th>
+            <th>id</th>
             <th>Product Name</th>
             <th>Product Price</th>
             <th>Product qty</th>
@@ -56,7 +103,7 @@
         <tbody></tbody>
       </table>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
   </body>
 </html>
